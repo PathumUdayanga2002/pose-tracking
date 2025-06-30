@@ -21,7 +21,7 @@ A web-based application to help you practice and improve your presentation body 
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/PathumUdayanga2002/pose-tracking.git
    cd pose-tracking
    ```
 2. **Install dependencies:**
