@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Practice - Body Language Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Custom Scripts -->
+  <script src="/static/pose-analyzer.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Presentation Practice Assistant</h1>
+        <div class="main-content">
+            <div class="video-container">
+                <video class="input_video" style="display: none;" autoplay playsinline></video>
+                <canvas class="output_canvas" width="640" height="480"></canvas>
+                <div id="feedback">Analyzing body language...</div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="chart-section">
+                    <h2>Body Language Analysis</h2>
+                    <div id="chart-container">
+                        <canvas id="postureChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="current-stats">
+                    <h2>Current Session</h2>
+                    <div id="session-stats">Waiting for data...</div>
+                </div>
+                
+                <div class="history-container">
+                    <h2>Progress Tracking</h2>
+                    <div class="progress-stats">
+                        <p>Total sessions completed: <span id="sessions-count">0</span></p>
+                        <p>Total practice time: <span id="total-practice-time">0</span> minutes</p>
+                    </div>
+                    
+                    <div class="presentation-tips">
+                        <h3>Presentation Tips</h3>
+                        <ul>
+                            <li>Stand with feet shoulder-width apart for stability</li>
+                            <li>Keep your shoulders relaxed and back straight</li>
+                            <li>Use hand gestures to emphasize key points</li>
+                            <li>Make eye contact with your audience</li>
+                            <li>Avoid fidgeting or swaying</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- All JavaScript functionality has been moved to external files:
+       - /static/pose-analyzer.js - Contains body language analysis logic
+       - /static/app.js - Contains main application logic
+  -->
+</body>
+</html>
